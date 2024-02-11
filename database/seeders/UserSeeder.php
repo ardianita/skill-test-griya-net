@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
                 'username' => 'admin-griyanet',
                 'email' => 'admin.griyanet@gmail.com',
                 'password' => bcrypt('password'),
+                'role' => 1,
             ],
         ];
 
