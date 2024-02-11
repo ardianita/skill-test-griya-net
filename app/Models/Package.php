@@ -11,4 +11,9 @@ class Package extends Model
 
     protected $table = 'packages';
     protected $fillable = ['package', 'price'];
+
+    public function customers()
+    {
+        return $this->hasMany(Customer::class, 'package_id', 'id');
+    }
 }

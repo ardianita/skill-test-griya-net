@@ -14,7 +14,7 @@ class PackageController extends Controller
         $packages = Package::query()->get();
 
         try {
-            return $responseFormatter->success($packages, 'Berhasil!', 202);
+            return $responseFormatter->success($packages, 'Berhasil!', 200);
         } catch (\Throwable $th) {
             return $responseFormatter->error($th, 'Gagal!', 400);
         }
@@ -26,7 +26,7 @@ class PackageController extends Controller
         $packages = Package::create($data);
 
         try {
-            return $responseFormatter->success($packages, 'Berhasil Ditambahkan!', 202);
+            return $responseFormatter->success($packages, 'Berhasil Ditambahkan!', 201);
         } catch (\Throwable $th) {
             return $responseFormatter->error($th, 'Gagal Ditambahkan!', 400);
         }
